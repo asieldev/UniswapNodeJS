@@ -1,0 +1,6 @@
+[
+    "function owner() view returns (address)",
+    "function getPool(address tokenA, address tokenB, uint24 fee) view returns (address pool)",
+    "function feeAmountTickSpacing(uint24) view returns (int24)",
+    "function poolByPair(address token0, address token1) view returns (address pool)"
+  ]
