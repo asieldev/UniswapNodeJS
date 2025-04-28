@@ -1,11 +1,12 @@
 # UniswapNodeJS
 
 ![DeFi](https://img.shields.io/badge/DeFi-Analytics-blue)
-![Web3](https://img.shields.io/badge/Web3-Integration-green)
+![Node.js API](https://img.shields.io/badge/Node.js-API-green)
+![Web3](https://img.shields.io/badge/Web3-Integration-yellow)
 ![Foundry](https://img.shields.io/badge/Foundry-Testing-orange)
 
 ## Resume
-This code defines a service (EthereumService) that interacts with Uniswap V3 to fetch liquidity pool data. It uses the ethers.js library to connect to the Ethereum blockchain via an RPC provider. The service queries Uniswap V3's factory contract to locate a specific pool (based on tokenA/tokenB and fee parameters), then retrieves detailed information including token addresses, symbols, decimals, total liquidity, and current price (calculated from sqrtPriceX96). It returns the structured data in a JSON object. Ideal for integration into DeFi analytics APIs.
+This code defines a service (NodeJS-Express) that interacts with Uniswap V3 to fetch liquidity pool data. It uses the ethers.js library to connect to the Ethereum blockchain via an RPC provider. The service queries Uniswap V3's factory contract to locate a specific pool (based on tokenA/tokenB and fee parameters), then retrieves detailed information including token addresses, symbols, decimals, total liquidity, and current price (calculated from sqrtPriceX96). It returns the structured data in a JSON object. Ideal for integration into DeFi analytics APIs.
 
 ## Folder structure
 ```bash
@@ -28,6 +29,10 @@ This code defines a service (EthereumService) that interacts with Uniswap V3 to 
 ```bash
 npm install express ethers@5.7.2
 npm install dotenv
+npm install helmet 
+npm install compression
+npm install morgan
+npm install cors
 ```
 
 ### Local Testing with Foundry
@@ -49,7 +54,7 @@ this.provider = new ethers.providers.JsonRpcProvider(constants.RPC.MAINNET);
 
 ## Application Execution
 ```bash
-node server.js
+NODE_ENV=staging node server.js
 ```
 
 ## Endpoint Verification
@@ -60,10 +65,4 @@ http://localhost:3000/api/AsielApiTest
 ### CLI Test
 ```bash
 curl -X GET http://localhost:3000/api/AsielApiTest
-```
-## Setup Instructions  
-
-1. Install required dependencies 
-```bash
-npm install express ethers@5.7.2
 ```
