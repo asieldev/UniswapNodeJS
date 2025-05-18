@@ -39,7 +39,7 @@ npm install cors
 
 #### Execution:
 ```bash
-anvil --fork-url https://mainnet.infura.io/v3/MY_ALCHEMY_KEY
+anvil --fork-url https://base-sepolia.g.alchemy.com/v2/v3/MY_ALCHEMY_KEY
 ```
 Update your provider configuration to:
 ```javascript
